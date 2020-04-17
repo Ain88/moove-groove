@@ -1,0 +1,40 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+  background-color: #FDF6EA !important;
+}
+
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+h1 {
+  color: red;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+    margin: 0; /* To remove default bottom margin */
+    padding: 0; /* To remove default left padding */
+}
+
+.listing {
+  list-style: none;
+}
+
+#sticky-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  flex-shrink: none;
+}
