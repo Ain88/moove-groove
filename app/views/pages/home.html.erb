@@ -1,12 +1,10 @@
-<div class="container">
 <%= alert %>
 <%= notice %>
-<h2 style="font-weight: bold">Login Information</h2>
+<h2 style="font-weight: bold">Greetings,</h2>
 <% if user_signed_in? %>
   <div>
     Id : <%= current_user.email %><br/>
     User No. : <%= current_user.id %>
   </div>
 <% else %>
-  You are not logged in yet.
-<% end %>
+  Main page

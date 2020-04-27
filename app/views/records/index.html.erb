@@ -1,0 +1,32 @@
+<%= alert %>
+<%= notice %>
+<% if user_signed_in? %>
+  <div>
+    <h2>User's Record page</h2>
+    <br>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Exercise</th>
+          <th>Calories</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @records.each do |record| %>
+          <% if record.user_id == current_user.id %>
+          <tr>
+            <td><%= record.activity_date %></td>
+            <td><%= record.activity.name %></td>
+            <td><%= record.total_calories %></td>
+          </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+
+<% else %>
+  <h2 style="font-weight: bold">GREETINGS, SIGN IN PLEASE</h2>
+<% end %>

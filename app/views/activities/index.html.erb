@@ -1,0 +1,22 @@
+<h2>ACTIVITIES LISTING PAGE</h2>
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Calories</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.name %></td>
+        <td><%= activity.calories %></td>
+        <td><%= activity.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<div class="container">
+<h2>ADD NEW ACTIVITY RECORD</h2>
+<%= render 'form' %>
+
+<br><br><br>
+<h2>FOR TESTING PURPOSE</h2>
+<div class="row justify-content-center">
+  <%= bootstrap_form_for (@record) do |f| %>
+    <% f.text_field :user_id, value: current_user.id %>
+    <%= f.collection_select(:activity_id, Activity.all, :id, :name) %>
+    <%= f.select(:duration, [["15 minutes", "15"], ["30 minutes", "30"]], id: "dur") %>
+    <%= f.date_field :activity_date %>
+    <%= f.text_field :total_calories %>
+    <%= f.submit "Add Activity" %>
+  <% end %>
+</div>
+</div>
