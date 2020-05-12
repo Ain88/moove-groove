@@ -10,14 +10,14 @@ class ActivitiesController < ApplicationController
   end
 
   def new
-    if current_user.admin != true || current_user.email != "admin@movegroove.com"
+    if current_user.admin != true && current_user.email != "admin@movegroove.com"
       redirect_to activities_path
     end
     @activity = Activity.new
   end
 
   def create
-    if current_user.admin != true || current_user.email != "admin@movegroove.com"
+    if current_user.admin != true && current_user.email != "admin@movegroove.com"
       redirect_to activities_path
     end
     @activity = Activity.new(activity_params)
@@ -30,13 +30,13 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
-    if current_user.admin != true || current_user.email != "admin@movegroove.com"
+    if current_user.admin != true && current_user.email != "admin@movegroove.com"
       redirect_to activities_path
     end
   end
 
   def update
-    if current_user.admin != true || current_user.email != "admin@movegroove.com"
+    if current_user.admin != true && current_user.email != "admin@movegroove.com"
       redirect_to activities_path
     end
     if @activity.update(activity_params)
