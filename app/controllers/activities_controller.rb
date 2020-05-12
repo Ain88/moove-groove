@@ -10,7 +10,7 @@ class ActivitiesController < ApplicationController
   end
 
   def new
-    if current_user.admin != true
+    if current_user.admin != true || current_user.email != "admin@movegroove.com"
       redirect_to activities_path
     end
     @activity = Activity.new
