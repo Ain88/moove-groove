@@ -1,5 +1,12 @@
-<h1>Showing records details</h1>
+<div class="table">
+  <h2>ACTIVITY DETAILS</h2>
+  <br>
 
-<p><strong>Title: </strong><%= @record.user_id %></p>
-<p><strong>Calories: </strong><%= @record.activity_id %></p>
-<p><strong>Details: </strong><%= @record.total_calories %></p>
+  <p><strong>Name of Activity: </strong><%= @record.activity.name %></p>
+  <p><strong>Duration of Activity: </strong><%= @record.duration %></p>
+  <p><strong>Calories burnt: </strong><%= @record.total_calories %></p>
+</div>
+
+<div class="row justify-content-center">
+ <%= link_to '[ Return to my activity record page ]', records_path, class: "text-info" %>
+</div>

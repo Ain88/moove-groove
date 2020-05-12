@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
+
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-  root 'records#index'
+  root 'pages#home'
 
-  get 'records/index'
+  get 'pages/home'
+  get 'pages/about'
 
-  resources :activities, only: [:show, :index, :new, :create, :edit, :update]
-  resources :records, only: [:index, :show, :new, :create, :edit, :update]
+  resources :activities
+  resources :records
+
+  get '*path',  to: 'application#not_found'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

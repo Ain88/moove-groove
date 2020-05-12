@@ -1,18 +1,53 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import 'rails_bootstrap_forms';
 
-.navbar {
-  background-color: #FDF6EA !important;
-  padding: 0.5rem 3rem;
+
+html,
+body {
 }
 
-.navbar-collapse.collapse.in {
-  display: block!important;
-}
 
-.navbar-brand {
-  font-size: 2.5rem;
+h2 {
   font-family: 'Covered By Your Grace', cursive;
+  color: #17a2b8 !important;
+  text-align: center;
+}
+
+h3 {
+  color: #666;
+}
+
+hr {
+    margin: 0;
+    border-top: 0.5px solid #666;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0 !important;
+}
+
+.indent {
+    text-indent: -3rem;
+}
+
+.alert {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 1.5rem auto;
+    padding: 0 4rem;
 }
 
 .table {
@@ -21,51 +56,210 @@
   margin-right: auto;
 }
 
-h2 {
-  font-family: 'Covered By Your Grace', cursive;
-  color: #17a2b8 !important;
-  text-align: center;
-}
-
-html,
-body {
-  min-height: 400px;
-  margin-bottom: 50px;
-  clear: both;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-ul {
-    margin: 0; /* To remove default bottom margin */
-    padding: 0; /* To remove default left padding */
+.about {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .listing {
   list-style: none;
 }
 
-#sticky-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  flex-shrink: 0;
+.jumbotron{
+  margin-top: -4rem;
+	background-image: image-url('main2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+  min-height: 400px;
 }
 
-@media only screen and (max-width: 1000px){
+.navbar {
+  background-color: white !important;
+  padding: 0.5rem 3rem;
+}
+
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #666;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-family: 'Covered By Your Grace', cursive;
+}
+
+.main {
+  color: #F0F0F0;
+  font-family: 'Covered By Your Grace', cursive;
+}
+
+.mainp {
+  color: #F0F0F0;
+}
+
+.mainu {
+  color: #F0F0F0;
+  font-family: 'Covered By Your Grace', cursive;
+  text-decoration: underline;
+}
+
+.mainu:hover{
+  color: #17a2b8;
+  text-decoration: underline !important;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #F0F0F0;
+}
+
+.btn-primary-outline:hover {
+  color: #17a2b8;
+  border-color: #17a2b8;
+  font-weight: bold;
+}
+
+.center-h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.contact {
+  background-color: #d97f2e !important;
+  padding: 3rem;
+  margin: 0 0 -4rem 0 !important;
+}
+
+.container-footer {
+  background-color: #222;
+  color: #c1c5c9;
+  margin: 0 !important;
+  padding-top: 3rem;
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #c1c5c9;
+  padding: 1rem;
+}
+
+.close {
+  float: none !important;
+}
+
+/* for font, color related small changes below */
+
+.align-l {
+  text-align: left;
+}
+
+.text-c {
+  font-family: 'Covered By Your Grace', cursive;
+  color: #17a2b8 !important;
+}
+
+.text-o {
+  color: #d97f2e;
+}
+
+.dark-f {
+  color: #666;
+}
+
+.dark-w {
+  color: #c1c5c9;
+}
+
+.color-o:hover {
+  color: #d97f2e !important;
+}
+
+.dark-w:hover {
+  color: #fc7800;
+}
+
+.sns {
+  font-size: 1.5rem;
+  color: #c1c5c9;
+}
+
+.sns:hover {
+  color: #c1c5c9;
+}
+
+/* for max-width 992px */
+@media only screen and (max-width: 992px){
+
+ .jumbotron{
+    margin-top: -4rem;
+  	background-image: image-url('main2.jpg');
+  	background-size: cover;
+  	background-repeat: no-repeat;
+    max-height: 200px;
+  }
+
+  .text-c, .mainu {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+  h1, h3, h4, h5, h6, p {
+   font-size: 1rem;
+ }
 
 .table {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
+
+}
+
+/* for max-width 600px */
+@media only screen and (max-width: 600px){
+  .jumbotron{
+     margin-top: -4rem;
+     background-image: image-url('main2.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     max-height: 100px;
+   }
+
+   .text-c, .mainu {
+     font-size: 1.5rem;
+   }
+
+   .main-hide {
+     display: none;
+   }
+
+   h2 {
+     font-size: 1.5rem;
+   }
+   h3, h4, h5, h6, p {
+     font-size: 1rem;
+   }
+
+   h1 {
+     font-size: 3.3rem !important;
+   }
+
+  .container-main {
+    padding: 0rem 1rem;
+  }
+  .container-footer {
+    padding-top: 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.6rem;
+  }
 
 }

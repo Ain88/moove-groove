@@ -1,7 +1,8 @@
+<div class="table">
+
 <h2>EDIT USER</h2>
 <!-- <h2>EDIT <%= resource_name.to_s.humanize %></h2> -->
 
-<div class="table">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -25,7 +26,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :weight %><br />
+    <%= f.label :weight %> (kg)<br />
     <%= f.text_field :weight, autofocus: true, autocomplete: "weight", class: "form-control" %>
   </div>
 

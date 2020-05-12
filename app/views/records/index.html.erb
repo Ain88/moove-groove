@@ -1,8 +1,6 @@
-<%= alert %>
-<%= notice %>
 <% if user_signed_in? %>
   <div>
-    <h2>User's Record page</h2>
+    <h2>MY ACTIVITY RECORD</h2>
     <br>
 
     <table class="table">
@@ -11,6 +9,8 @@
           <th>Date</th>
           <th>Exercise</th>
           <th>Calories</th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
       </thead>
 
@@ -21,6 +21,8 @@
             <td><%= record.activity_date %></td>
             <td><%= record.activity.name %></td>
             <td><%= record.total_calories %></td>
+            <td><%= link_to "Edit", edit_record_path(record) %></td>
+            <td><%= link_to "Delete", record_path(record), method: :delete, data: {confirm: "Are you sure?"} %></td>
           </tr>
           <% end %>
         <% end %>
@@ -30,3 +32,9 @@
 <% else %>
   <h2 style="font-weight: bold">GREETINGS, SIGN IN PLEASE</h2>
 <% end %>
+
+</div>
+
+<div class="row justify-content-center">
+ <%= link_to '[ Add New Activity Record ]', new_record_path, class: "text-info" %>
+</div>

@@ -1,4 +1,4 @@
-<h2>SIGN</h2>
+<h2>SIGN UP</h2>
 
 <div class="table">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -20,7 +20,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :weight %><br />
+    <%= f.label :weight %> (kg)<br />
     <%= f.text_field :weight, autofocus: true, autocomplete: "weight", class: "form-control" %>
   </div>
 
@@ -41,7 +41,7 @@
     <%= f.submit "Sign up", class: "btn btn-secondary" %>
   </div>
 <% end %>
-
-<%= link_to "[Login]", "/users/sign_in", class: "text-info" %>
+<br>
+<%= link_to "[Already a registered user? Login here.]", "/users/sign_in", class: "text-info" %>
 <!-- <%= render "devise/shared/links" %> -->
 </div>

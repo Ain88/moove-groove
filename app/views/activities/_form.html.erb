@@ -1,0 +1,25 @@
+<div class="table">
+    <%= form_with(model: @activity, class: "p-3 mb-3 rounded", local: true) do |f| %>
+    <%= render "/layouts/error_general", resource: @activity %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :calories %>
+        <%= f.text_field :calories, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+      <div class="form-group">
+          <%= f.submit class: "btn btn-secondary" %>
+      </div>
+     </div>
+   <% end %>
+ </div>
+
+<div class="row justify-content-center">
+ <%= link_to '[ Cancel and return to activity listing page ]', activities_path, class: "text-info" %>
+</div>

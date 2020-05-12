@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
+  def not_found
+    render file: "#{Rails.root}/app/views/layouts/custom_404.html", layout: true, status: :not_found
+  end
         private
 
         def configure_permitted_parameters

@@ -1,4 +1,4 @@
-<h2>ACTIVITIES LISTING PAGE</h2>
+<h2>ACTIVITY LIST</h2>
 <br>
 
 <table class="table">
@@ -7,6 +7,10 @@
       <th>Name</th>
       <th>Calories</th>
       <th>Description</th>
+      <% if current_user.admin? %>
+      <th>Edit</th>
+      <th>Delete</th>
+      <% end %>
     </tr>
   </thead>
 
@@ -16,7 +20,14 @@
         <td><%= activity.name %></td>
         <td><%= activity.calories %></td>
         <td><%= activity.description %></td>
+        <% if current_user.admin? %>
+        <td><%= link_to "Edit", edit_activity_path(activity) %></td>
+        <td><%= link_to "Delete", activity_path(activity), method: :delete, data: {confirm: "Are you sure?"} %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
+<div class="row justify-content-center">
+ <%= link_to '[ Add New Activity ]', new_activity_path, class: "text-info" %>
+</div>

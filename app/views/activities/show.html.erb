@@ -1,7 +1,11 @@
 <h2>ACTIVITY DETAILS</h2>
 
 <div class="table">
-<p><strong>Title: </strong><%= @activity.name %></p>
+<p><strong>Name: </strong><%= @activity.name %></p>
 <p><strong>Calories: </strong><%= @activity.calories %></p>
-<p><strong>Details: </strong><%= @activity.description %></p>
+<p><strong>Description: </strong><%= @activity.description %></p>
+</div>
+
+<div class="row justify-content-center">
+ <%= link_to '[ Return to activity listing page ]', activities_path, class: "text-info" %>
 </div>

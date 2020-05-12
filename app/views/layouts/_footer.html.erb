@@ -1,5 +1,59 @@
-<footer id="sticky-footer" class="py-4 bg-dark text-white">
-  <div class="container text-center">
-    <small>Copyright &copy; <%= link_to "Ahyoung In", "https://ain88.github.io/portfolio", class: "text-white" %></small>
+<div class="container container-main container-footer">
+  <div class="row">
+    <div class="col-12 col-md-3">
+      <a href="../"><h2 class="align-l" href="../">MOVE & GROOVE</h2></a><br>
+      <p>The Activity app on your iPhone keeps a record of your activity.<br>
+        It's more fun when you are fit!
+     </p>
+    </div>
+    <div class="col-12 col-md-3">
+      <h4 class="text-c">Contact Info</h4>
+      <p>Do you have any question?<br>
+          Phone Number: (071) 4973 2566<br>
+          Mobile Number: 042 080 3211<br>
+          <a href="mailto:ahyungss@hotmail.com"><span class="text-o">Email: move.groove@gmail.com</span></a>
+     </p>
+    </div>
+    <div class="col-12 col-md-3">
+      <h4 class="text-c">Information</h4>
+      <p>People who track stay on track because they’re paying attention to their behaviour.
+        It forces you to pay attention to the behaviour you’re trying to change.
+     </p>
+   </div>
+    <div class="col-12 col-md-3">
+      <h4 class="text-c">Follow Me</h4>
+      <p>Working out is better together. Follow us and check our latest news.
+       </p>
+      <a class="sns" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;
+      <a class="sns" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+      <a class="sns" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>&nbsp;&nbsp;
+      <a class="sns" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+    </div>
+  </div>
+</div> <!-- /container -->
+
+<footer>
+  <div class="text-center">
+    <small><a href="../" class= "dark-w">Moove&Groove</a> |
+      <%= link_to "About", "/pages/about", class: "dark-w" %> |
+      <% if user_signed_in? %>
+        Activity -
+        <%= link_to "Activity list", activities_path, class: "dark-w" %>
+        <% if current_user.admin == true %>
+        , <%= link_to "Add activity(admin)", "/activities/new", class: "dark-w" %>
+        <% end %>
+        | My Record -
+        <%= link_to "My activity", records_path, class: "dark-w" %>
+        , <%= link_to "Add my activity", "/records/new", class: "dark-w" %>
+        |
+        <%= link_to "User Setting", edit_user_registration_path, class: "dark-w" %>
+        |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dark-w" %>
+        <% else %>
+        <%= link_to "Login", user_session_path, class: "dark-w" %>
+        | <%= link_to "Sign Up", "/users/sign_up", class: "dark-w" %>
+      <% end %>
+    </small><br>
+    <small><span class="dark-f">@2020 </span><%= link_to "Move & Groove", "../", class: "dark-w" %><span class="dark-f">| Created by </span><%= link_to "Ahyoung In", "https://ain88.github.io/portfolio", class: "dark-w" %></small>
   </div>
 </footer>

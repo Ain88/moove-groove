@@ -1,10 +1,46 @@
-<%= alert %>
-<%= notice %>
-<h2 style="font-weight: bold">Greetings,</h2>
-<% if user_signed_in? %>
-  <div>
-    Id : <%= current_user.email %><br/>
-    User No. : <%= current_user.id %>
-  </div>
-<% else %>
-  Main page
+
+  <div class="jumbotron">
+    <div class="container container-main">
+      <div class="float-md-center text-center">
+      <h1 class="display-4 main">Let's move & groove</h1><br>
+      <h5 class="mainp">Move and Groove is a personal training app.</h5>
+        <h5 class="mainp">You can check calories for exercise and track your activities.</h5>
+      <h5 class="mainp"><a class="mainu" href="/pages/about">LEARN MORE ABOUT THIS</a></h5>
+      <h6><a class="btn btn-primary-outline" href="/users/sign_in" role="button">Login</a>
+      <a class="btn btn-primary-outline" href="/users/sign_up" role="button">Signup</a></h6>
+      </div>
+    </div>
+  </div> <!-- /jumbotron -->
+
+  <div class="container container-main">
+    <h2 class="center-h3">WHAT'S IN IT FOR YOU?</h2><br>
+    <div class="row">
+      <div class="col-md-4">
+        <h6>TRACK YOUR WORKOUTS</h6>
+        <p>This Activity app keeps a record of your activity.
+          If you’ve tracked at least six months of activity, it displays daily
+          trend data for active calories, exercise minutes and more.
+       </p>
+      </div>
+      <div class="col-md-4">
+        <h6>MONITOR YOUR GOALS</h6>
+        <p>People who track stay on track because they’re paying attention to their behaviour.
+          It forces you to pay attention to the behaviour you’re trying to change.
+       </p>
+     </div>
+      <div class="col-md-4">
+        <h6>FIND WORKOUT BUDDIES</h6>
+        <p>Working out is better together. Studies show that those working out with a partner,
+          exercise 200 percent longer than those doing it alone.
+       </p>
+      </div>
+    </div>
+  </div> <!-- /container -->
+
+
+  <div class="container contact">
+    <div class="text-center">
+        <h5 class="mainp">Get in touch if you want to join in or need more information</h5><br>
+        <h5 class="mainp"><a class="btn btn-primary-outline" href="mailto:move.groove@gmail.com" role="button">CONTACT US</a></h5>
+    </div>
+  </div> <!-- /container -->

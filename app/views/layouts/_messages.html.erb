@@ -1,0 +1,9 @@
+<% flash.each do |key, value| %>
+  <div class="alert alert-info <%= key %> text-center table" id="flash">
+      <ul>
+        <li class="indent">
+          <%= value %><a href="#" data-dismiss="alert" class="close">&nbsp ×</a>
+        </li>
+      </ul>
+  </div>
+<% end %>
