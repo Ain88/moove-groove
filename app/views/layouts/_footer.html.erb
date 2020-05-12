@@ -39,7 +39,7 @@
       <% if user_signed_in? %>
         Activity -
         <%= link_to "Activity list", activities_path, class: "dark-w" %>
-        <% if current_user.admin == true %>
+        <% if current_user.admin == true || current_user.email == "admin@movegroove.com" %>
         , <%= link_to "Add activity(admin)", "/activities/new", class: "dark-w" %>
         <% end %>
         | My Record -

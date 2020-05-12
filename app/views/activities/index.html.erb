@@ -28,6 +28,9 @@
     <% end %>
   </tbody>
 </table>
+
+<% if current_user.admin == true || current_user.email == "admin@movegroove.com" %>
 <div class="row justify-content-center">
  <%= link_to '[ Add New Activity ]', new_activity_path, class: "text-info" %>
 </div>
+<% end %>

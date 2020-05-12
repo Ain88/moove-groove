@@ -17,7 +17,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <small><span class="dark-f">&nbspActivity</span></small>
           <%= link_to "Activity list", activities_path, class: "dropdown-item" %>
-          <% if current_user.admin == true %>
+          <% if current_user.admin == true || current_user.email == "admin@movegroove.com" %>
           <%= link_to "Add activity(admin)", "/activities/new", class: "dropdown-item" %>
           <% end %>
           <div class="dropdown-divider"></div>
