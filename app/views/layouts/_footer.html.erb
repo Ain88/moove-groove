@@ -37,14 +37,13 @@
     <small><a href="../" class= "dark-w">Moove&Groove</a> |
       <%= link_to "About", "/pages/about", class: "dark-w" %> |
       <% if user_signed_in? %>
-        Activity -
-        <%= link_to "Activity list", activities_path, class: "dark-w" %>
+        <%= link_to "Activity", activities_path, class: "dark-w" %>
         <% if current_user.admin == true || current_user.email == "admin@movegroove.com" %>
         , <%= link_to "Add activity(admin)", "/activities/new", class: "dark-w" %>
         <% end %>
-        | My Record -
-        <%= link_to "My activity", records_path, class: "dark-w" %>
-        , <%= link_to "Add my activity", "/records/new", class: "dark-w" %>
+        | 
+        <%= link_to "My record", records_path, class: "dark-w" %>
+        , <%= link_to "Add record", "/records/new", class: "dark-w" %>
         |
         <%= link_to "User Setting", edit_user_registration_path, class: "dark-w" %>
         |

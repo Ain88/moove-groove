@@ -16,14 +16,14 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <small><span class="dark-f">&nbspActivity</span></small>
-          <%= link_to "Activity list", activities_path, class: "dropdown-item" %>
+          <%= link_to "Activity", activities_path, class: "dropdown-item" %>
           <% if current_user.admin == true || current_user.email == "admin@movegroove.com" %>
           <%= link_to "Add activity(admin)", "/activities/new", class: "dropdown-item" %>
           <% end %>
           <div class="dropdown-divider"></div>
           <small><span class="dark-f">&nbspMy Record</span></small>
-          <%= link_to "My activity", records_path, class: "dropdown-item" %>
-          <%= link_to "Add my activity", "/records/new", class: "dropdown-item" %>
+          <%= link_to "Record", records_path, class: "dropdown-item" %>
+          <%= link_to "Add record", "/records/new", class: "dropdown-item" %>
         </div>
       </li>
         <li class="nav-item">
