@@ -1,7 +1,11 @@
 <div class="table">
 <h2>Forgot your password?</h2>
+<br>
+  <p style="text-align: center">Please send us email, we will send you new password.</p>
+</div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+
+<!-- <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="form-group">
@@ -14,5 +18,5 @@
 <% end %>
 <br>
 <%= link_to "[Sign Up]", "/users/sign_up", class: "text-info" %>
-<%= link_to "[Login]", "/users/sign_in", class: "text-info" %>
+<%= link_to "[Login]", "/users/sign_in", class: "text-info" %> -->
 </div>
