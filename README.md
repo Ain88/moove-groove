@@ -1,24 +1,12 @@
-# README
+# Moove and Groove
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+Track your fitness habits. Combined a Ruby on Rails back-end with a front-end in React to build a cool activity tracker, allowing user to add activities and monitor their overall fitness trends.
 
-Things you may want to cover:
+## Technology
 
-* Ruby version
+- Ruby on Rails
+- Heroku
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Link
+Link -> https://move-groove-rails.herokuapp.com/
